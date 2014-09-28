@@ -1,0 +1,24 @@
+name:                   Abstract
+version:                0.0.1
+stability:              provisional
+license:                BSD3
+license-file:           LICENSE
+
+cabal-version:          >= 1.8
+build-type:             Simple
+
+author:                 Andrew Darqui <andrew.darqui@gmail.com>
+maintainer:             Andrew Darqui <andrew.darqui@gmail.com>
+homepage:               github.com/adarqui/Abstract
+
+category:               Experimental
+synopsis:               Abstract
+
+Library
+ hs-source-dirs:        src
+ exposed-modules:       Abstract
+                        Abstract.Tools
+                        Abstract.Queue
+                        Abstract.Counter
+ build-depends:         base >= 3 && <5, bytestring, Abstract-Interfaces, Abstract-Impl-Libs, Abstract-Impl-Redis, Abstract-Impl-Memcache, DevUtils-Base, DevUtils-Parser, DevUtils-Redis
+ ghc-options:           -Wall -rtsopts
