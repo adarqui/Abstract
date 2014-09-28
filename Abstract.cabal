@@ -19,6 +19,11 @@ Library
  exposed-modules:       Abstract
                         Abstract.Tools
                         Abstract.Queue
+                        Abstract.Queue.Deq
+                        Abstract.Queue.Enq
                         Abstract.Counter
+                        Abstract.Counter.Get
+                        Abstract.Counter.Inc
+                        Abstract.Counter.Dec
  build-depends:         base >= 3 && <5, bytestring, Abstract-Interfaces, Abstract-Impl-Libs, Abstract-Impl-Redis, Abstract-Impl-Memcache, DevUtils-Base, DevUtils-Parser, DevUtils-Redis
  ghc-options:           -Wall -rtsopts
