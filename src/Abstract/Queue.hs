@@ -22,7 +22,7 @@ import Data.Maybe
 mkQueue url pack unpack = do
  case (runCmd url) of
   (Left err) -> error err
-  (Right url') -> mkQueue' url'
+  (Right url') -> mkQueue' url' pack unpack
 
 mkQueue' url pack unpack = do
  case url of
