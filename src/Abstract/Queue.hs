@@ -19,13 +19,13 @@ import qualified Data.ByteString.Char8 as C
 
 import Data.Maybe
 
-mkQueue url = do
+mkQueue url pack unpack = do
  case (runCmd url) of
   (Left err) -> error err
   (Right url') -> mkQueue' url'
 
-mkQueue' url = do
+mkQueue' url pack unpack = do
  case url of
-  (UrlRedis redis) -> mkQueue'Redis $ queueRedis (maybe "queue" id (System.DevUtils.Base.Url.Redis._key redis)) C.pack C.unpack $ redis'urlToConnectInfo redis
+  (UrlRedis redis) -> mkQueue'Redis $ queueRedis (maybe "queue" id (System.DevUtils.Base.Url.Redis._key redis)) pack unpack $ redis'urlToConnectInfo redis
   (UrlChan) -> mkQueue'Chan
   _ -> error "Unsupported url"
