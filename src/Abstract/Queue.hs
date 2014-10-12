@@ -26,6 +26,6 @@ mkQueue url = do
 
 mkQueue' url = do
  case url of
-  (UrlRedis redis) -> mkQueue'Redis $ queueRedis (maybe "queue" id (_key redis)) C.pack C.unpack $ redis'urlToConnectInfo redis
+  (UrlRedis redis) -> mkQueue'Redis $ queueRedis (maybe "queue" id (System.DevUtils.Base.Url.Redis._key redis)) C.pack C.unpack $ redis'urlToConnectInfo redis
   (UrlChan) -> mkQueue'Chan
   _ -> error "Unsupported url"
