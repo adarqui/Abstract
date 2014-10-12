@@ -7,6 +7,6 @@ import Abstract.Queue
 import Abstract.Interfaces.Queue
 import Abstract.Interfaces.Queue.Deq
 
-mkQueue'Deq url = do
- c <- mkQueue url
+mkQueue'Deq url pack unpack = do
+ c <- mkQueue url pack unpack
  return $ queueToDeq c
