@@ -26,5 +26,5 @@ Library
                         Abstract.Counter.Get
                         Abstract.Counter.Inc
                         Abstract.Counter.Dec
- build-depends:         base >= 3 && <5, bytestring, Abstract-Interfaces, Abstract-Impl-Libs, Abstract-Impl-Redis, Abstract-Impl-Memcache, DevUtils-Base, DevUtils-Parser, DevUtils-Redis
+ build-depends:         base >= 3 && <5, bytestring, Abstract-Interfaces ==0.0.2, Abstract-Impl-Libs, Abstract-Impl-Redis ==0.0.2, Abstract-Impl-Memcache, DevUtils-Base, DevUtils-Parser, DevUtils-Redis
  ghc-options:           -Wall -rtsopts
